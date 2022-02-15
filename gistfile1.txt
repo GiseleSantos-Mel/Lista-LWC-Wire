@@ -1,0 +1,14 @@
+import { LightningElement , wire } from 'lwc';
+import getAccounts from '@salesforce/apex/selectAccountLWC.getAccounts';
+
+export default class ListaSHOWAccount extends LightningElement {
+    //importa e chama da Classe selectAccountLWC o metodo getAccounts
+    //import getAccounts from '@salesforce/apex/selectAccountLWC.getAccounts';
+    
+
+    //Declaro o Wire pq vou pegar dados do SF
+    // getAccounts >> Nome da instancia do retorno do apex selectAccountLWC.getAccounts
+    // Atribuo tudo na variavel minhaListinhaShow
+    @wire(getAccounts) minhaListinhaShow;
+
+}

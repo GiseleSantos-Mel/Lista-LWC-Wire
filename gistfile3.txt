@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Listinha só dos cliente SHOW">
+        <template for:each={getAccounts.data} for:item="acc">
+            <p key={acc.Id}>
+                {acc.Name}
+            </p>
+        </template>
+    </lightning-card>
+</template>
